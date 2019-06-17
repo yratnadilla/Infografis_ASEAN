@@ -16,7 +16,9 @@ plt.style.use('seaborn')
 plt.figure('GNP of ASEAN Countries')
 plt.title('GNP of ASEAN Countries')
 
-plt.bar(data['Name'], data['GNP'])
+color = ['#00796B', '#388E3C', '#689F38', '#AFB42B', '#FBC02D',
+        '#FFA000', '#F57C00', '#E64A19', '#5D4037', '#616161', '#455A64']
+plt.bar(data['Name'], data['GNP'], color=color)
 
 for x, y in zip(data['Name'], data['GNP']):
     label = "{:,}".format(int(y))
